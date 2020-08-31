@@ -55,13 +55,14 @@ export default function Post({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
-
+  console.log(`Revalidating /post/${params.slug}`);
   return {
     props: {
       preview,
       post: data?.post ?? null,
       morePosts: data?.morePosts ?? null,
     },
+    revalidate: 15
   }
 }
 
