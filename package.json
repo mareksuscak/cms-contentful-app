@@ -1,27 +1,24 @@
 {
-  "name": "cms-contentful",
-  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next build && next export",
     "start": "next start",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "13.4.0",
-    "classnames": "2.2.6",
-    "contentful": "7.14.4",
-    "date-fns": "2.10.0",
-    "next": "latest",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "@contentful/rich-text-react-renderer": "15.1.0",
+    "classnames": "2.3.1",
+    "contentful": "8.4.2",
+    "date-fns": "2.23.0",
+    "next": "11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "contentful-import": "^7.7.12",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.2.0"
-  },
-  "license": "MIT"
+    "autoprefixer": "^10.3.1",
+    "contentful-import": "^8.1.25",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
 }
